@@ -58,9 +58,23 @@ public class KthLevelNode {
         }
     }
 
+    static void printKthLevel2(Node root, int level, int k) {
+        if (root == null)
+            return;
+        if (level == k) {
+            System.out.print(root.data + " ");
+            return;
+        }
+
+        printKthLevel2(root.left, level + 1, k);
+        printKthLevel2(root.right, level + 1, k);
+    }
+
     public static void main(String[] args) {
         int[] nodes = { 1, 2, 4, -1, -1, 5, -1, -1, 3, 6, -1, -1, 7, -1, -1 };
         Node root = buildTree(nodes);
         printKthLevel(root, 2);
+        System.out.println();
+        printKthLevel2(root, 1, 3);
     }
 }
