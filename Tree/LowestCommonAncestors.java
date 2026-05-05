@@ -61,10 +61,27 @@ public class LowestCommonAncestors {
         return lCB;
     }
 
+    static Node lca2(Node root, int n1, int n2) {
+        if (root == null || root.data == n1 || root.data == n2)
+            return root;
+
+        Node lLCA = lca2(root.left, n1, n2);
+        Node rLCA = lca2(root.right, n1, n2);
+
+        if (lLCA == null)
+            return rLCA;
+        if (rLCA == null)
+            return lLCA;
+
+        return root;
+    }
+
     public static void main(String[] args) {
         int[] nodes = { 1, 2, 4, -1, -1, 5, -1, -1, 3, 6, -1, -1, 7, -1, -1 };
         Node root = buildTree(nodes);
         Node node = lca(root, 4, 7);
-        System.out.println("LCA: " + node.data);
+        System.out.println("LCA of 4 & 7: " + node.data);
+        Node node1 = lca2(root, 4, 5);
+        System.out.println("LCA of 4 & 5: " + node1.data);
     }
 }
