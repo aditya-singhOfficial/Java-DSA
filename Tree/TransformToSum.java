@@ -65,6 +65,20 @@ public class TransformToSum {
         return root.data + nodeData;
     }
 
+    static int sumTree2(Node root) {
+        if (root == null)
+            return 0;
+        int leftChild = sumTree2(root.left);
+        int rightChild = sumTree2(root.right);
+        int data = root.data;
+
+        int newLeft = root.left == null ? 0 : root.left.data;
+        int newRight = root.right == null ? 0 : root.right.data;
+
+        root.data = leftChild + newLeft + rightChild + newRight;
+        return data;
+    }
+
     public static void main(String[] args) {
         int[] nodes = { 1, 2, 4, -1, -1, 5, -1, -1, 3, 6, -1, -1, 7, -1, -1 };
         Node root = buildTree(nodes);
