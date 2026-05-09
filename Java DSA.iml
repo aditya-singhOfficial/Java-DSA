@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1186. Maximum Subarray Sum with One Deletion" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1382. Balance a Binary Search Tree" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/148. Sort List" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/152. Maximum Product Subarray" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/160. Intersection of Two Linked Lists" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1848. Minimum Distance to the Target Element" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/19. Remove Nth Node From End of List" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2. Add Two Numbers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/206. Reverse Linked List" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2095. Delete the Middle Node of a Linked List" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/21. Merge Two Sorted Lists" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/234. Palindrome Linked List" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/24. Swap Nodes in Pairs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/39. Combination Sum" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/40. Combination Sum II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/61. Rotate List" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/82. Remove Duplicates from Sorted List II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/83. Remove Duplicates from Sorted List" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/86. Partition List" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/905. Sort Array By Parity" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/92. Reverse Linked List II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/922. Sort Array By Parity II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Interleave two half of the queue" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tree" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
