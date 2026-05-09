@@ -26,6 +26,10 @@ public class Insertion {
         void printHeap() {
             System.out.println(list);
         }
+
+        int peek() {
+            return list.get(0);
+        }
     }
 
     public static void main(String[] args) {
@@ -37,5 +41,6 @@ public class Insertion {
         h.add(7);
         h.add(6);
         h.printHeap();
+        System.out.println(h.peek());
     }
 }
