@@ -23,6 +23,38 @@ public class Insertion {
             }
         }
 
+        private void heapify(int i) {
+            int left = (2 * i) + 1;
+            int right = (2 * i) + 2;
+            int minIdx = i;
+
+            if (left < list.size() && list.get(minIdx) > list.get(left)) {
+                minIdx = left;
+            }
+
+            if (right < list.size() && list.get(minIdx) > list.get(right)) {
+                minIdx = right;
+            }
+
+            if (minIdx != i) {
+                int temp = list.get(minIdx);
+                list.set(minIdx, list.get(i));
+                list.set(i, temp);
+
+                heapify(minIdx);
+            }
+        }
+
+        int remove() {
+            int removed = list.get(0);
+            list.set(0, list.get(list.size() - 1));
+            list.remove(list.size() - 1);
+
+            heapify(0);
+
+            return removed;
+        }
+
         void printHeap() {
             System.out.println(list);
         }
@@ -41,6 +73,8 @@ public class Insertion {
         h.add(7);
         h.add(6);
         h.printHeap();
-        System.out.println(h.peek());
+        System.out.println(h.remove());
+        h.printHeap();
+
     }
 }
