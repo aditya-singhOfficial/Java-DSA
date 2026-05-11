@@ -10,7 +10,7 @@ public class Solution {
         s.add(5);
         s.add(28);
 
-        Iterator it = s.iterator();
+        Iterator<Integer> it = s.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }
