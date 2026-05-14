@@ -1,0 +1,27 @@
+package Graph;
+
+import java.util.ArrayList;
+
+public class Dfs {
+    class Solution {
+    public ArrayList<Integer> dfs(ArrayList<ArrayList<Integer>> adj) {
+        ArrayList<Integer> result = new ArrayList<>();
+        boolean[] visited = new boolean[adj.size()];
+        
+        dfsHelper(0, adj, visited, result);
+        
+        return result;
+    }
+    
+    public void dfsHelper(int node, ArrayList<ArrayList<Integer>> adj, boolean[] visited, ArrayList<Integer> result) {
+        visited[node] = true;
+        result.add(node);
+        
+        for (int neighbor : adj.get(node)) {
+            if (!visited[neighbor]) {
+                dfsHelper(neighbor, adj, visited, result);
+            }
+        }
+    }
+}
+}
