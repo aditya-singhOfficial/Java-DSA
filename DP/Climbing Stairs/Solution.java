@@ -2,10 +2,28 @@ import java.util.Arrays;
 
 class Solution {
     public static int climbStairs(int n) {
+        int[] stairs = new int[n + 1];
+        Arrays.fill(stairs, -1);
+        System.out.println("Using DP memoization: " + climbUsingDPMemo(n, 0, stairs));
+
         return climbUsingRecurssion(n, 0); // using recursion
 
     }
 
+    static int climbUsingDPMemo(int n, int stair, int[] stairs) {
+        if (n == stair)
+            return 1;
+        if (n < stair)
+            return 0;
+        if (stairs[stair] != -1) {
+            return stairs[stair];
+        }
+
+        stairs[stair] = climbUsingDPMemo(n, stair + 1, stairs) +
+                climbUsingDPMemo(n, stair + 2, stairs);
+
+        return stairs[stair];
+    }
 
     static int climbUsingRecurssion(int n, int stair) {
         if (stair == n)
