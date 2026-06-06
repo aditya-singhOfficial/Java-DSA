@@ -18,9 +18,27 @@ class Solution {
         return pascal;
     }
 
+    public static List<List<Integer>> generate2(int numRows) {
+        List<List<Integer>> pascal = new ArrayList<>();
+        for (int i = 0; i < numRows; i++) {
+            List<Integer> pas1 = new ArrayList<>();
+            for (int j = 0; j <= i; j++) {
+                if (j == 0 || i == j) {
+                    pas1.add(1);
+                } else {
+                    pas1.add(
+                            pascal.get(i - 1).get(j - 1) + pascal.get(i - 1).get(j));
+                }
+
+            }
+            pascal.add(pas1);
+        }
+        return pascal;
+    }
+
     public static void main(String[] args) {
 
-        List<List<Integer>> pascal = generate(5);
+        List<List<Integer>> pascal = generate2(5);
         System.out.println(pascal);
     }
 }
